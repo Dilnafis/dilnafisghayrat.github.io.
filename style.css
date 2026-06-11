@@ -1,110 +1,91 @@
-/* Minimal Academic GitHub Pages Theme */
+/* Classic Top-Nav Academic Theme */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     color: #333333;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
-/* The main container holding both columns */
+/* Centers all content and restricts width for readability */
 .wrapper {
-    display: flex;
-    max-width: 1000px;
-    margin: 60px auto;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-/* --- LEFT SIDEBAR DESIGN --- */
-.sidebar {
-    width: 250px;
-    flex-shrink: 0; /* Prevents sidebar from shrinking */
-    padding-right: 40px;
+/* --- HEADER & NAVIGATION --- */
+.site-header {
+    border-top: 5px solid #424242; /* Classic dark top bar */
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #ffffff;
 }
 
-.profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* Makes the image a perfect circle */
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 1px solid #eaeaea;
+.site-header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.sidebar h1 {
-    font-size: 1.5em;
-    margin: 0 0 5px 0;
-    color: #111;
-}
-
-.pronunciation {
-    font-size: 0.9em;
-    color: #666;
-    margin: 0 0 15px 0;
-    font-style: italic;
-}
-
-.bio {
-    font-size: 0.95em;
-    color: #444;
-    margin-bottom: 25px;
-}
-
-.contact-info p {
-    margin: 8px 0;
-    font-size: 0.9em;
-}
-
-.sidebar-nav {
-    margin-top: 35px;
-    padding-top: 25px;
-    border-top: 1px solid #eaeaea;
-}
-
-.sidebar-nav a {
-    display: block;
-    color: #555;
+.site-title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #424242;
     text-decoration: none;
-    padding: 6px 0;
-    font-size: 0.95em;
+    letter-spacing: -0.5px;
 }
 
-.sidebar-nav a:hover {
-    color: #1a73e8;
-    font-weight: bold;
+.site-nav a {
+    color: #111111;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
 }
 
-/* --- RIGHT MAIN CONTENT DESIGN --- */
-.content {
-    flex-grow: 1;
-    padding-left: 50px;
-    border-left: 1px solid #eaeaea;
+.site-nav a:hover {
+    color: #2a7ae2;
+    text-decoration: underline;
 }
 
-.content section {
-    margin-bottom: 60px;
+/* --- MAIN CONTENT --- */
+.page-content {
+    padding: 40px 0;
+    min-height: 60vh;
 }
 
-h2 {
-    font-size: 1.8em;
-    color: #222;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 10px;
+.page-heading {
+    font-size: 32px;
+    font-weight: 400;
     margin-top: 0;
     margin-bottom: 20px;
+    color: #222222;
 }
 
-h3 {
-    font-size: 1.2em;
-    color: #444;
-    margin-top: 25px;
-    margin-bottom: 15px;
+/* Puts text on the left and photo on the right */
+.home-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
 }
 
-/* Links */
+.bio-text {
+    flex: 1;
+}
+
+.bio-photo img {
+    max-width: 220px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15); /* Subtle shadow around photo */
+}
+
+/* --- TYPOGRAPHY & LINKS --- */
 a {
-    color: #1a73e8; /* Professional academic blue */
+    color: #2a7ae2; /* Clean academic link blue */
     text-decoration: none;
 }
 
@@ -112,40 +93,48 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Lists */
-.academic-list {
-    list-style-type: disc;
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+ul {
     padding-left: 20px;
 }
 
-.academic-list li {
-    margin-bottom: 15px;
+li {
+    margin-bottom: 10px;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    border-top: 1px solid #e8e8e8;
+    padding: 30px 0;
+    color: #828282;
+    font-size: 14px;
+    text-align: center;
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
-/* Stacks the columns on top of each other on small screens */
-@media (max-width: 768px) {
-    .wrapper {
+@media (max-width: 600px) {
+    .site-header .wrapper {
         flex-direction: column;
-        margin: 30px auto;
+        align-items: flex-start;
     }
-    .sidebar {
-        width: 100%;
-        padding-right: 0;
-        text-align: center;
-        border-bottom: 1px solid #eaeaea;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
+    .site-nav {
+        margin-top: 15px;
     }
-    .profile-pic {
-        width: 150px;
-        height: 150px;
+    .site-nav a {
+        margin-left: 0;
+        margin-right: 15px;
     }
-    .content {
-        border-left: none;
-        padding-left: 0;
+    .home-layout {
+        flex-direction: column-reverse; /* Puts photo above text on phones */
     }
-    .sidebar-nav {
-        display: none; /* Hides the extra navigation on mobile to save space */
+    .bio-photo img {
+        max-width: 180px;
     }
 }
