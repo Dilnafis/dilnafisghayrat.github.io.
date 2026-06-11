@@ -3,30 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Dinafeisi Aireti</title>
+    <title>Dinafeisi Aireti | Development Economics</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="site-container">
-        <!-- Navigation Menu -->
-        <nav class="sidebar-nav">
-            <div class="site-title">Dinafeisi Aireti</div>
-            <a href="index.html" class="active">Home</a>
-            <a href="research.html">Research</a>
-            <a href="teaching.html">Teaching</a>
-            <a href="restaurants.html">Restaurants</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-        <!-- Main Content Area -->
-        <main class="content-area">
-            <h1>Dinafeisi Aireti (Dilnafis Ghayrat)</h1>
-            <p class="subtitle">Postdoctoral Researcher | Development Economics & Applied Microeconomics</p>
-            <hr>
+    <div class="wrapper">
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
+            <!-- Save a square photo as profile.jpg in the same folder -->
+            <img src="profile.jpg" alt="Dinafeisi Aireti" class="profile-pic">
             
-            <h2>About Me</h2>
-            <p>Hi! I am currently a postdoc at the Research Institute of Economics and Business Administration, Kobe University.</p>
-            <p>My research focus is in Development Economics and Applied Microeconomics.</p>
+            <h1>Dinafeisi Aireti</h1>
+            <p class="pronunciation">(Dilnafis Ghayrat)</p>
+            <p class="bio">Postdoctoral Researcher at the Research Institute of Economics and Business Administration, Kobe University.</p>
+            
+            <div class="contact-info">
+                <p><a href="mailto:your.email@example.com">✉️ Email</a></p>
+                <p><a href="#">📄 Curriculum Vitae</a></p>
+                <p><a href="#">🎓 Google Scholar</a></p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#about">About Me</a>
+                <a href="#research">Research</a>
+                <a href="#teaching">Teaching</a>
+                <a href="#restaurants">Restaurants</a>
+            </nav>
+        </aside>
+
+        <!-- RIGHT MAIN CONTENT -->
+        <main class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Hi! I am currently a postdoc at the Research Institute of Economics and Business Administration, Kobe University. My research fields are Development Economics and Applied Microeconomics.</p>
+            </section>
+
+            <section id="research">
+                <h2>Research</h2>
+                <h3>Working Papers</h3>
+                <ul class="academic-list">
+                    <li>
+                        <strong>"Your First Paper Title"</strong> (with Co-authors), 2026. <br>
+                        <a href="#">[PDF]</a> <a href="#">[Abstract]</a>
+                    </li>
+                    <li>
+                        <strong>"Your Second Paper Title"</strong>, 2025. <br>
+                        <a href="#">[PDF]</a>
+                    </li>
+                </ul>
+
+                <h3>Work in Progress</h3>
+                <ul class="academic-list">
+                    <li>"Ongoing Project Title" - Brief description of what you are currently researching.</li>
+                </ul>
+            </section>
+            
+            <section id="teaching">
+                <h2>Teaching</h2>
+                <ul class="academic-list">
+                    <li><strong>Course Name</strong>, Kobe University (Spring 2026)</li>
+                    <li><strong>Course Name</strong>, Previous Institution (Fall 2025)</li>
+                </ul>
+            </section>
+
+            <section id="restaurants">
+                <h2>Restaurants</h2>
+                <p>A collection of my favorite spots in the Kobe area and beyond:</p>
+                <ul class="academic-list">
+                    <li><strong>Restaurant Name</strong> - A fantastic place for lunch near the campus.</li>
+                    <li><strong>Cafe Name</strong> - Best coffee for writing papers.</li>
+                </ul>
+            </section>
         </main>
     </div>
 </body>
